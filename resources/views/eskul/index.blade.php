@@ -6,7 +6,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Karyawan</h4>
-                        <a href="{{route('eskul.create')}}" class="btn btn-sm btn-primary" enctype="multipart/form-data">ADD</a>
+                        <a href="{{route('eskul.create')}}" class="btn btn-sm btn-primary" enctype="multipart/form-data">Tambah</a>
                     </div>
                     <div class="panel-body">
                         <div class="table-responsive">

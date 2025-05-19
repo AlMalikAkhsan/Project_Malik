@@ -34,7 +34,11 @@ class EskulController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        $validated = $request->validate([
+            'nama_eskul' => 'required|unique:eskuls',            
+            'foto' => 'required|mimes:jpg,png|max:1024',
+        ]);
         $eskul = new Eskul();
         $eskul->nama_eskul = $request->nama_eskul;
         if ($request->hasFile('foto')) {
@@ -81,7 +85,12 @@ class EskulController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {   
+        $validated = $request->validate([
+            'nama_eskul' => 'required|unique:eskuls',            
+            'foto' => 'required|mimes:jpg,png|max:1024',
+
+        ]);
         $eskul = Eskul::findOrFail($id);
         $eskul->nama_eskul = $request->nama_eskul;
         if ($request->hasFile('foto')) {

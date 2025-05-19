@@ -70,7 +70,10 @@
                                         @method('put')
                                         <div class="form-group">
                                             <label>Nama Fasilitas</label>
-                                            <input class="form-control" name="nama_fasilitas" type="text" value="{{$fasilitas->nama_fasilitas}}">
+                                            <input class="form-control @error('nama_fasilitas') is-invalid @enderror" name="nama_fasilitas" type="text" value="{{$fasilitas->nama_fasilitas}}">
+                                        @error('nama_fasilitas')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                        @enderror
                                         </div>
                                         <div class="mb-2">
                                             <label for="">Foto</label>

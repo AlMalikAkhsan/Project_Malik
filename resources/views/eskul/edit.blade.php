@@ -16,7 +16,10 @@
                                         @method('put')
                                         <div class="form-group">
                                             <label>Nama Eskul</label>
-                                            <input class="form-control" name="nama_eskul" type="text" value="{{$eskul->nama_eskul}}">
+                                            <input class="form-control @error('nama_eskul') is-invalid @enderror" name="nama_eskul" type="text" value="{{$eskul->nama_eskul}}">
+                                        @error('nama_eskul')
+                                        <div class="invalid-feedback">{{$message}}</div>
+                                        @enderror
                                         </div>
                                         <div class="mb-2">
                                             <label for="">Foto</label>

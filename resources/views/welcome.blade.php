@@ -41,17 +41,12 @@
             @foreach($eskul as $data)
                 <div class="course bg-white h-100 align-self-stretch">
                     <figure class="m-0">
-                        <a href=""><img src="{{asset('user/images/img_1.jpg')}}" alt="Image" class="img-fluid"></a>
+                        <a href=""> <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 340;"></a>
                     </figure>
-                    <div class="course-inner-text py-4 px-4">
-                        <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
+                    <div class="course-inner-text py-4 px-4">                        
                         <h3>{{$data->nama_eskul}}</h3>
                         <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-                    </div>
-                    <div class="d-flex border-top stats">
-                        <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
-                        <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
-                    </div>
+                    </div>                      
                 </div>                
             @endforeach
             </div>
@@ -77,11 +72,11 @@
         <div class="row mb-5 align-items-center">
         @foreach($informasi as $data)
             <div class="col-lg-7 mb-5" data-aos="fade-up" data-aos-delay="100">
-                <img src="{{asset('user/images/undraw_youtube_tutorial.svg')}}" alt="Image" class="img-fluid">
+                <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 500px;">
             </div>
             <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="text-black mb-4">{{$data->judul}}</h2>
-                <p class="mb-4">{{$data->deskripsi}}</p>
+                <h2 class="text-black mb-6">{{$data->judul}}</h2>
+                <p class="mb-6">{{$data->deskripsi}}</p>
             </div>
             @endforeach
         </div>
@@ -97,15 +92,15 @@
                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellat aut neque! Doloribus sunt non aut reiciendis, vel recusandae obcaecati hic dicta repudiandae in quas quibusdam ullam, illum sed veniam!</p>
             </div>
         </div>    
-        <div class="row">
+        <div class="row justify-content-center">
         @foreach($karyawan as $data)
             <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="teacher text-center">
-                    <img src="{{asset ('user/images/person_1.jpg')}}" alt="Image" class="img-fluid w-50 rounded-circle mx-auto mb-4">
+                     <img src="{{asset('storage/gambar/'. $data->foto)}}" class="rounded-circle" style="width: 150px;">
                     <div class="py-2">
                         <h3 class="text-black">{{$data->nama}}</h3>
                         <p class="position">{{$data->tugas}}</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eius suscipit delectus enim iusto tempora, adipisci at provident.</p>
+                        <p>{{$data->jabatan}}</p>
                     </div>
                 </div>
             </div> 
@@ -119,10 +114,10 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-8 text-center testimony">
-                <img src="{{asset('user/images/kp.png')}}" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-                <h3 class="mb-4">Anna Musdalifah, M.Pd.</h3>
+                <img src="{{asset('user/images/person_4.jpg')}}" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+                <h3 class="mb-4">Al</h3>
                 <blockquote>
-                    <p>&ldquo; Menjadi Lembaga Pendidikan Anak USia Dini Berkualitas Membentuk Anak Sehat, Soleh,Cerdas dan Berakhlak Mulia melalui Layanan PAUD Holstik Integratif yang Unggul di Provinsi Jawa Barat Tahun 2025 . &rdquo;</p>
+                    <p>&ldquo; "Sukses dan hebat" &rdquo;</p>
                 </blockquote>
             </div>
         </div>
@@ -186,7 +181,7 @@
                 </div>
             </div>
             <div class="col-lg-7 align-self-end" data-aos="fade-left" data-aos-delay="200">
-                <img src="{{asset('user/images/kp02.png')}}" alt="Image" class="img-fluid">
+                <img src="{{asset('user/images/person_transparent.png')}}" alt="Image" class="img-fluid">
             </div>
         </div>
     </div>

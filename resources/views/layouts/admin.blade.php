@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset ('admin/vendor/owl-carousel/css/owl.theme.default.min.css')}}">
     <link href="{{asset ('admin/vendor/jqvmap/css/jqvmap.min.css')}}" rel="stylesheet">
     <link href="{{asset ('admin/css/style.css')}}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     @yield('style')
 </head>
 <body>
@@ -31,9 +32,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="{{route ('home')}}" class="brand-logo">
-                <img class="logo-abbr" src="{{asset ('admin/images/logo.png')}}" alt="">
-                <img class="logo-compact" src="{{asset ('admin/images/logo-text.png')}}" alt="">
-                <img class="brand-title" src="{{asset ('admin/images/logo-text.png')}}" alt="">
+                <img class="item-center" src="{{asset ('admin/images/logo-tk.png')}}" style="width: 140px;">
             </a>
 
             <div class="nav-control">
@@ -77,6 +76,7 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Required vendors -->
     <script src="{{asset ('admin/vendor/global/global.min.js')}}"></script>
     <script src="{{asset ('admin/js/quixnav-init.js')}}"></script>

@@ -11,6 +11,7 @@
                         <li><a href="#courses-section" class="nav-link">Esktrakulikuler</a></li>
                         <li><a href="#programs-section" class="nav-link">Tentang Sekolah</a></li>
                         <li><a href="#teachers-section" class="nav-link">Karyawan</a></li>
+                        <li><a href="{{('fasilitas')}}" class="nav-link">Fasilitas</a></li>
                     </ul>
                 </nav>
             </div>

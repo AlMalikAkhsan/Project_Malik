@@ -30,7 +30,9 @@
                                         <div class="form-group">
                                             <label for="">Foto</label>
                                             <input type="file" name="foto" id="" class="form-control @error('foto') is-invalid @enderror" >
-
+                                            @error('foto')
+                                            <div class="invalid-feedback">{{$message}}</div>
+                                            @enderror
                                         </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>

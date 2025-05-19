@@ -16,14 +16,14 @@
                                         @method('put')
                                         <div class="form-group">
                                             <label>Judul</label>
-                                            <input class="form-control @error('poto') is-invalid @enderror" name="judul" type="text" value="{{$informasi->judul}}">
+                                            <input class="form-control @error('judul') is-invalid @enderror" name="judul" type="text" value="{{$informasi->judul}}">
                                             @error('judul')
                                             <div class="invalid-feedback">{{$message}}</div>
                                             @enderror
                                         </div>
                                         <div class="form-group">
                                             <label>Deskripsi</label>
-                                            <textarea name="deskripsi" class="form-control @error('poto') is-invalid @enderror">{{$informasi->deskripsi}}</textarea>
+                                            <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror">{{$informasi->deskripsi}}</textarea>
                                             @error('deskripsi')
                                             <div class="invalid-feedback">{{$message}}</div>
                                             @enderror

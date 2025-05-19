@@ -35,6 +35,14 @@ class KaryawanController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'nama' => 'required|unique:karyawans',    
+            'jenis_kelamin' => 'required',
+            'tugas' => 'required',
+            'jabatan' => 'required',
+            'foto' => 'required|mimes:jpg,png|max:1024',
+
+        ]);
         $karyawan = new Karyawan();
         $karyawan->nama = $request->nama;
         $karyawan->jenis_kelamin = $request->jenis_kelamin;  
@@ -86,6 +94,14 @@ class KaryawanController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validated = $request->validate([
+            'nama' => 'required|unique:karyawans',    
+            'jenis_kelamin' => 'required',
+            'tugas' => 'required',
+            'jabatan' => 'required',
+            'foto' => 'required|mimes:jpg,png|max:1024',
+
+        ]);
         $karyawan = karyawan::findOrFail($id);
         $karyawan->nama = $request->nama;
         $karyawan->jenis_kelamin = $request->jenis_kelamin;       
