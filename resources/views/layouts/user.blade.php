@@ -1,53 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>OneSchool &mdash; Website by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Company Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
+  <!-- Favicons -->
+  <link href="{{ asset ('user/img/favicon.png')}}" rel="icon">
+  <link href="{{ asset ('user/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('user/fonts/icomoon/style.css')}}">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('user/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('user/css/jquery-ui.css')}}">
-    <link rel="stylesheet" href="{{asset('user/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('user/css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('user/css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('user/css/jquery.fancybox.min.css')}}">
-    <link rel="stylesheet" href="{{asset('user/css/bootstrap-datepicker.css')}}">
-    <link rel="stylesheet" href="{{asset('user/fonts/flaticon/font/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('user/css/aos.css')}}">
-    <link rel="stylesheet" href="{{asset('user/css/style.css')}}">
-    @yield('style')
+  <!-- Vendor CSS Files -->
+  <link href="{{ asset ('user/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ asset ('user/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ asset ('user/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{ asset ('user/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ asset ('user/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
+  <!-- Main CSS File -->
+  <link href="{{ asset ('user/css/main.css')}}" rel="stylesheet">
+  
+  @yield('style')
+  <!-- =======================================================
+  * Template Name: Company
+  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-    @include('layouts.component-user.header')
+<body class="index-page">
 
-    <div class="site-wrap">
+  @include('layouts.component-user.header')
+
+  <main class="main">
+
     @yield('content')
-    </div> <!-- .site-wrap -->
 
-    @include('layouts.component-user.footer')
+  </main>
 
-    <script src="{{asset('user/js/jquery-3.3.1.min.js')}}"></script>
-    <script src="{{asset('user/js/jquery-migrate-3.0.1.min.js')}}"></script>
-    <script src="{{asset('user/js/jquery-ui.js')}}"></script>
-    <script src="{{asset('user/js/popper.min.js')}}"></script>
-    <script src="{{asset('user/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('user/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('user/js/jquery.stellar.min.js')}}"></script>
-    <script src="{{asset('user/js/jquery.countdown.min.js')}}"></script>
-    <script src="{{asset('user/js/bootstrap-datepicker.min.js')}}"></script>
-    <script src="{{asset('user/js/jquery.easing.1.3.js')}}"></script>
-    <script src="{{asset('user/js/aos.js')}}"></script>
-    <script src="{{asset('user/js/jquery.fancybox.min.js')}}"></script>
-    <script src="{{asset('user/js/jquery.sticky.js')}}"></script>
-    <script src="{{asset('user/js/main.js')}}"></script>
-    
-    @stack('scripts')
+  @include('layouts.component-user.footer')
 
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ asset ('user/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ asset ('user/vendor/php-email-form/validate.js')}}"></script>
+  <script src="{{ asset ('user/vendor/aos/aos.js')}}"></script>
+  <script src="{{ asset ('user/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ asset ('user/vendor/imagesloaded/imagesloaded.pkgd.min.js')}}"></script>
+  <script src="{{ asset ('user/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ asset ('user/vendor/waypoints/noframework.waypoints.js')}}"></script>
+  <script src="{{ asset ('user/vendor/swiper/swiper-bundle.min.js')}}"></script>
+
+  <!-- Main JS File -->
+  <script src="{{ asset ('user/js/main.js')}}"></script>
+  @stack('scripts')
 </body>
+
 </html>

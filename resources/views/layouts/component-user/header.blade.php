@@ -1,30 +1,28 @@
-<header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center">
 
-    <div class="container-fluid">
-        <div class="d-flex align-items-center">
-            <div class="site-logo mr-auto w-26"><a href="{{ url('/home') }}">TK Assalaam</a></div>
+      <a href="" class="logo d-flex align-items-center me-auto">
 
-            <div class="mx-auto text-center">
-                <nav class="site-navigation position-relative text-right" role="navigation">
-                    <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
-                        <li><a href="#home-section" class="nav-link">Beranda</a></li>
-                        <li><a href="#courses-section" class="nav-link">Esktrakulikuler</a></li>
-                        <li><a href="#programs-section" class="nav-link">Tentang Sekolah</a></li>
-                        <li><a href="#teachers-section" class="nav-link">Karyawan</a></li>
-                        <li><a href="{{('fasilitas')}}" class="nav-link">Fasilitas</a></li>
-                    </ul>
-                </nav>
-            </div>
+         <img src="{{ asset ('user/img/logo.png')}}" alt="">
+        <h1 class="sitename">Company</h1><span>.</span>
+      </a>
 
-            <div class="ml-auto w-25">
-                <nav class="site-navigation position-relative text-right" role="navigation">
-                    <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
-                        <li class="cta"><a href="#"></a></li>
-                    </ul>
-                </nav>
-                <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
-            </div>
-        </div>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{{url ('welcome')}}" class="active">Beranda</a></li>  
+          <li><a href="{{url ('informasi')}}">Informasi</a></li>    
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pricing.html">Pricing</a></li>          
+          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown"><a href="{{url ('about')}}"><span>Tentang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{{url ('team')}}">Karyawan</a></li>
+              <li><a href="testimonials.html">Eskul</a></li>              
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
     </div>
-
-</header>
+  </header>

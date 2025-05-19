@@ -1,189 +1,75 @@
 @extends('layouts.user')
 @section('content')
-<div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-            <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-    </div>
-    <div class="site-mobile-menu-body"></div>
-</div>
 
-<div class="intro-section" id="home-section">
-    <div class="slide-1" style="background-image: url('user/images/sekolahnya.png');" data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 mb-4">
-                            <h1 data-aos="fade-up" data-aos-delay="100">Selamat Datang di TK Assalaam</h1>
-                        </div>
-                    </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="{{ asset ('user/img/hero-carousel/hero-carousel-1.jpg')}}" alt="">
+          <div class="container">
+            <h2>Selamat Datang!!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a href="{{url ('about')}}" class="btn-get-started">Read More</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{{ asset ('user/img/hero-carousel/hero-carousel-2.jpg')}}" alt="">
+          <div class="container">
+            <h2>At vero eos et accusamus</h2>
+            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
+            <a href="{{url ('about')}}" class="btn-get-started">Read More</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{{ asset ('user/img/hero-carousel/hero-carousel-3.jpg')}}" alt="">
+          <div class="container">
+            <h2>Temporibus autem quibusdam</h2>
+            <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
+            <a href="{{url ('about')}}" class="btn-get-started">Read More</a>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row position-relative">
+        <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="{{ asset ('user/img/about.jpg')}}"></div>
+
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="inner-title">Tentang Sekolah</h2>
+                <div class="our-story">              
+                    <h3>Cerita Kami</h3>
+                    <p>TK Assalaam hadir sejak tahun 1957. TK Assalaam merupakan bagian dari Yayasan Assalaam yang fokus pada Pendidikan anak usia dini.</p>
+                    <p>
+                        Memiliki Staff Pengajar Berkualitas yang merupalan Lulusan PG PAUD & Sarjana yang telah berpengalaman membimbing/ mendidik anak usia dini yang dipilih secara selektif Berintegritas akhlak Berdedikasi tinggi Memiliki kompetensi di bidangnya Orangtua sebagai mitra TK Assalaam melibatkan orang tua dalam program pendidikannya yakni sangat terbuka untuk menjalin komunikasi dua arah baik masukan maupun informasi.
+                    </p>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
 
-<div class="site-section courses-title" id="courses-section">
-    <div class="container">
-        <div class="row mb-5 justify-content-center">
-            <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
-                <h2 class="section-title">Esktrakulikuler</h2>
-            </div>
         </div>
-    </div>
-</div>
-<div class="site-section courses-entry-wrap" data-aos="fade-up" data-aos-delay="100">
-    <div class="container">
-        <div class="row">
-            <div class="owl-carousel col-12 nonloop-block-14">
-            @foreach($eskul as $data)
-                <div class="course bg-white h-100 align-self-stretch">
-                    <figure class="m-0">
-                        <a href=""> <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 340;"></a>
-                    </figure>
-                    <div class="course-inner-text py-4 px-4">                        
-                        <h3>{{$data->nama_eskul}}</h3>
-                        <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-                    </div>                      
-                </div>                
-            @endforeach
-            </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-7 text-center">
-                <button class="customPrevBtn btn btn-primary m-1">Sebelumnya</button>
-                <button class="customNextBtn btn btn-primary m-1">Selanjutnya</button>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="site-section" id="programs-section">
-    <div class="container">
-        <div class="row mb-5 justify-content-center">
-            <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
-                <h2 class="section-title">Tentang Sekolah</h2>
-                <p>“ Menjadi Lembaga Pendidikan Anak USia Dini Berkualitas Membentuk Anak Sehat, Soleh,Cerdas dan Berakhlak Mulia melalui Layanan PAUD Holstik Integratif yang Unggul di Provinsi Jawa Barat Tahun 2025 . ”</p>
-            </div>
-        </div>
-        <div class="row">
-        <div class="row mb-5 align-items-center">
-        @foreach($informasi as $data)
-            <div class="col-lg-7 mb-5" data-aos="fade-up" data-aos-delay="100">
-                <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 500px;">
-            </div>
-            <div class="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
-                <h2 class="text-black mb-6">{{$data->judul}}</h2>
-                <p class="mb-6">{{$data->deskripsi}}</p>
-            </div>
-            @endforeach
-        </div>
-        </div>
-    </div>
-</div>
+    </section><!-- /About Section -->        
+    <br>
 
-<div class="site-section" id="teachers-section">
-    <div class="container">
-        <div class="row mb-5 justify-content-center">
-            <div class="col-lg-7 mb-5 text-center" data-aos="fade-up" data-aos-delay="">
-                <h2 class="section-title">Karyawan</h2>
-                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellat aut neque! Doloribus sunt non aut reiciendis, vel recusandae obcaecati hic dicta repudiandae in quas quibusdam ullam, illum sed veniam!</p>
-            </div>
-        </div>    
-        <div class="row justify-content-center">
-        @foreach($karyawan as $data)
-            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="teacher text-center">
-                     <img src="{{asset('storage/gambar/'. $data->foto)}}" class="rounded-circle" style="width: 150px;">
-                    <div class="py-2">
-                        <h3 class="text-black">{{$data->nama}}</h3>
-                        <p class="position">{{$data->tugas}}</p>
-                        <p>{{$data->jabatan}}</p>
-                    </div>
-                </div>
-            </div> 
-        @endforeach                       
-        </div>
-        </div>
-    </div>
-</div>
-
-<div class="site-section bg-image overlay" style="background-image: url('images/hero_1.jpg');">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-8 text-center testimony">
-                <img src="{{asset('user/images/person_4.jpg')}}" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-                <h3 class="mb-4">Al</h3>
-                <blockquote>
-                    <p>&ldquo; "Sukses dan hebat" &rdquo;</p>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="site-section pb-0">
-    <div class="future-blobs">
-        <div class="blob_2">
-            <img src="{{asset('user/images/blob_2.svg')}}" alt="Image">
-        </div>
-        <div class="blob_1">
-            <img src="{{asset('user/images/blob_1.svg')}}" alt="Image">
-        </div>
-    </div>
-    <div class="container">
-        <div class="row mb-5 justify-content-center" data-aos="fade-up" data-aos-delay="">
-            <div class="col-lg-7 text-center">
-                <h2 class="section-title">Why Choose Us</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 ml-auto align-self-start" data-aos="fade-up" data-aos-delay="100">
-                <div class="p-4 rounded bg-white why-choose-us-box">
-                    <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
-                        <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
-                        <div>
-                            <h3 class="m-0">22,931 Yearly Graduates</h3>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
-                        <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
-                        <div>
-                            <h3 class="m-0">150 Universities Worldwide</h3>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
-                        <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
-                        <div>
-                            <h3 class="m-0">Top Professionals in The World</h3>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
-                        <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
-                        <div>
-                            <h3 class="m-0">Expand Your Knowledge</h3>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3">
-                        <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-graduation-cap"></span></span></div>
-                        <div>
-                            <h3 class="m-0">Best Online Teaching Assistant Courses</h3>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center custom-icon-wrap custom-icon-light">
-                        <div class="mr-3"><span class="custom-icon-inner"><span class="icon icon-university"></span></span></div>
-                        <div>
-                            <h3 class="m-0">Best Teachers</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-7 align-self-end" data-aos="fade-left" data-aos-delay="200">
-                <img src="{{asset('user/images/person_transparent.png')}}" alt="Image" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
