@@ -4,11 +4,11 @@
     <!-- Page Title -->
     <div class="page-title accent-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">About</h1>
+        <h1 class="mb-2 mb-lg-0">Tentang</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">About</li>
+            <li><a href="{{url ('/')}}">Home</a></li>
+            <li class="current">Tentang</li>
           </ol>
         </nav>
       </div>

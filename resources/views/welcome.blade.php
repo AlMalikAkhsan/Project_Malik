@@ -72,4 +72,39 @@
     </section><!-- /About Section -->        
     <br>
 
+     <!-- Blog Posts Section -->
+     <section id="blog-posts" class="blog-posts section">
+         <div class="container">
+             <div class="row gy-4 justify-content-center">
+                 @foreach($informasi as $data)
+                 <div class="col-lg-4">
+                     <article class="position-relative h-100">
+
+                         <div class="post-img position-relative overflow-hidden">
+                             <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 500px;">
+                         </div>
+
+                         <div class="post-content d-flex flex-column">
+
+                             <h3 class="post-title">{{$data->judul}}</h3>
+
+                             <p>
+                                 {{$data->deskripsi}}
+                             </p>
+
+                             <hr>
+
+                             <a href="{{route ('detail.informasi', $data->id)}}" class="readmore stretched-link"><span>Selengkapnya</span><i class="bi bi-arrow-right"></i></a>
+
+                         </div>
+
+                     </article>
+                 </div><!-- End post list item -->
+                 @endforeach
+             </div>
+         </div>
+
+     </section><!-- /Blog Posts Section -->
+
+
 @endsection

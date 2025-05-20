@@ -15,6 +15,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th>Tanggal Prestasi</th>
                                 <th>Nama Prestasi</th>
                                 <th>Tingkat</th>
                                 <th>Deskripsi</th>
@@ -28,6 +29,7 @@
 
                             <tr>
                                 <td>{{$no++}}</td>
+                                <td>{{$data->tgl_prestasi}}</td>
                                 <td>{{$data->nama_prestasi}}</td>
                                 <td>{{$data->tingkat}}</td>
                                 <td>{{Str::limit($data->deskripsi,50)}}</td>                                

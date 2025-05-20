@@ -22,10 +22,16 @@ use App\Models\Prestasi;
 |
 */
 
-Route::get('/welcome', [FrontController::class, 'index']);
+Route::get('/', [FrontController::class, 'index']);
 Route::get('/about', [FrontController::class, 'about']);
 Route::get('/team', [FrontController::class, 'team']);
 Route::get('/informasi', [FrontController::class, 'informasi']);
+Route::get('/fasilitas', [FrontController::class, 'fasilitas']);
+Route::get('/eskul', [FrontController::class, 'eskul']);
+Route::get('/prestasi', [FrontController::class, 'prestasi']);
+Route::get('/detail-informasi/{id}', [FrontController::class, 'detailinformasi'])->name('detail.informasi');
+
+
 Auth::routes(['register' => false]); 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

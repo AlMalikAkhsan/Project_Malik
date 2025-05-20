@@ -37,7 +37,7 @@ class PrestasiController extends Controller
     {
         $validated = $request->validate([
             'tgl_prestasi' => 'required',
-            'nama_prestasi' => 'required|unique:eskuls',    
+            'nama_prestasi' => 'required|unique:prestasis',    
             'tingkat' => 'required',
             'deskripsi' => 'required',
             'foto' => 'required|mimes:jpg,png|max:1024',
@@ -95,7 +95,7 @@ class PrestasiController extends Controller
     {
         $validated = $request->validate([
             'tgl_prestasi' => 'required',
-            'nama_prestasi' => 'required|unique:eskuls',    
+            'nama_prestasi' => 'required|unique:prestasis',    
             'tingkat' => 'required',
             'deskripsi' => 'required',
             'foto' => 'required|mimes:jpg,png|max:1024',

@@ -3,11 +3,11 @@
     <!-- Page Title -->
     <div class="page-title accent-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Team</h1>
+        <h1 class="mb-2 mb-lg-0">Karyawan</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Team</li>
+            <li><a href="{{url ('/')}}">Home</a></li>
+            <li class="current">Karyawan</li>
           </ol>
         </nav>
       </div>
@@ -33,7 +33,8 @@
               </div>
               <div class="member-info">
                 <h4>{{$data->nama}}</h4>
-                <span>{{$data->jabatan}}</span>
+                <h5>{{$data->jabatan}}</h5>
+                <span>{{$data->tugas}}</span>
               </div>
             </div>
           </div><!-- End Team Member -->
