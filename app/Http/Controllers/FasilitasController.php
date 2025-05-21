@@ -14,7 +14,7 @@ class FasilitasController extends Controller
      */
     public function index()
     {
-        $fasilitas = Fasilitas::latest()->get();
+        $fasilitas = Fasilitas::orderBy('id', 'desc')->get();
         return view('fasilitas.index', compact('fasilitas'));
     }
 
@@ -89,8 +89,8 @@ class FasilitasController extends Controller
     public function update(Request $request, $id)
     {        
         $validated = $request->validate([
-            'nama_fasilitas' => 'required|unique:fasilitas',            
-            'foto' => 'required|mimes:jpg,png|max:1024',
+            'nama_fasilitas' => 'required',            
+            'foto' => 'nullable|mimes:jpg,png|max:1024',
 
         ]);
         $fasilitas = Fasilitas::findOrFail($id);

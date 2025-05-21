@@ -13,8 +13,10 @@ class InformasiController extends Controller
      */
     public function index()
     {
-        $informasi = Informasi::latest()->get();
+
+        $informasi = Informasi::orderBy('id', 'desc')->get();
         return view('informasi.index', compact('informasi'));
+
     }
 
     /**
@@ -92,7 +94,7 @@ class InformasiController extends Controller
         $request->validate([
         'judul' => 'required',
         'deskripsi' => 'required',
-        'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+        'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ]);
         $informasi = Informasi::findOrFail($id);
         $informasi->judul = $request->judul;

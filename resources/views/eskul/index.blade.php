@@ -34,9 +34,9 @@
                                             <form action="{{route('eskul.destroy', $data->id)}}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <a href="{{route('eskul.edit', $data->id)}}" class="btn btn-sm btn-success">Edit</a> |
-                                                <a href="{{route('eskul.show', $data->id)}}" class="btn btn-sm btn-warning">Show</a> |
-                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda Yakin?')">Delete</button>
+                                                <a href="{{route('eskul.edit', $data->id)}}" class="btn btn-sm btn-success">Ubah</a> |
+                                                <a href="{{route('eskul.show', $data->id)}}" class="btn btn-sm btn-warning">Liat</a> |
+                                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda Yakin?')">Hapus</button>
                                             </form>
 
                                         </td>

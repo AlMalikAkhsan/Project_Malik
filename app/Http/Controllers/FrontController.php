@@ -18,17 +18,19 @@ class FrontController extends Controller
     }
     public function about()
     {
-        $karyawan = Karyawan::all();
-        return view('about', compact('karyawan'));
+        $prestasi = Prestasi::take(3)->get();
+        $eskul = Eskul::take(3)->get();
+        $karyawan = Karyawan::take(3)->get();
+        return view('about', compact('karyawan','prestasi','eskul'));
     }
     public function team()
     {
-        $karyawan = Karyawan::all();
+        $karyawan = Karyawan::orderBy('id', 'desc')->get();
         return view('team', compact('karyawan'));
     }
      public function informasi()
     {
-        $informasi = Informasi::all();
+        $informasi = Informasi::orderBy('id', 'desc')->get();
         return view('informasi', compact('informasi'));
     }
      public function detailinformasi($id)
@@ -38,17 +40,17 @@ class FrontController extends Controller
     }
     public function fasilitas()
     {
-        $fasilitas = Fasilitas::all();
+        $fasilitas = Fasilitas::orderBy('id', 'desc')->get();
         return view('fasilitas', compact('fasilitas'));
     }
     public function eskul()
     {
-        $eskul = Eskul::all();
+        $eskul = Eskul::orderBy('id', 'desc')->get();
         return view('eskul', compact('eskul'));
     }
     public function prestasi()
     {
-        $prestasi = Prestasi::all();
+        $prestasi = Prestasi::orderBy('id', 'desc')->get();
         return view('prestasi', compact('prestasi'));
     }
 }

@@ -13,7 +13,7 @@ class EskulController extends Controller
      */
     public function index()
     {
-        $eskul = Eskul::latest()->get();
+        $eskul = Eskul::orderBy('id', 'desc')->get();
         return view('eskul.index', compact('eskul'));
     }
 
@@ -87,8 +87,8 @@ class EskulController extends Controller
     public function update(Request $request, $id)
     {   
         $validated = $request->validate([
-            'nama_eskul' => 'required|unique:eskuls',            
-            'foto' => 'required|mimes:jpg,png|max:1024',
+            'nama_eskul' => 'required',            
+            'foto' => 'nullable|mimes:jpg,png|max:1024',
 
         ]);
         $eskul = Eskul::findOrFail($id);

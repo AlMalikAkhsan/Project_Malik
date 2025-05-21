@@ -24,14 +24,11 @@
                     <div class="post-img position-relative overflow-hidden">
                         <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 500px;">
                     </div>
-
                     <div class="post-content d-flex flex-column">
                         <h3 class="post-title">{{$data->nama_prestasi}}</h3>
-                        <p>
-                            {{$data->deskripsi}}
-                        </p>
-
-                        <hr>
+                        <p>{{$data->tgl_prestasi}}</p>
+                        <p>{{$data->tingkat}}</p>
+                        <p>{{$data->deskripsi}}</p>
                     </div>
 
                 </article>
@@ -39,6 +36,5 @@
             @endforeach
         </div>
     </div>
-
 </section><!-- /Blog Posts Section -->
 @endsection

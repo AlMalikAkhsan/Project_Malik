@@ -10,8 +10,13 @@
             <li><a href="#">Fasilitas</a></li>
             <li><a href="#">Karyawan</a></li>
             <li><a href="#">Eskul</a></li>
+            <li><a href="#">Prestasi</a></li>
           </ul>
-        </div>        
+        </div> 
+        <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Alamat Sekolah ini!!</h4>           
+            <p>Jl. Sasak Gantung No.9, Balonggede, Kec. Regol, Kota Bandung, Jawa Barat 40251</p>
+        </div>
       </div>
     </div>
 

@@ -2,7 +2,7 @@
     <div class="container position-relative d-flex align-items-center">
 
       <a  class="logo d-flex align-items-center me-auto">
-         <img src="{{ asset ('user/img/logo-tk.png')}}" style="width: 100px;">
+         <img src="{{ asset ('user/img/logo-tk.png')}}" style="width: 90px;">
       </a>
 
       <nav id="navmenu" class="navmenu">

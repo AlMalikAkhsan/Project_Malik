@@ -15,7 +15,7 @@
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();" class="dropdown-item">
                                 <i class="icon-key"></i>
-                                <span class="ml-2">Logout </span>
+                                <span class="ml-2">Keluar</span>
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

@@ -13,7 +13,7 @@ class PrestasiController extends Controller
      */
     public function index()
     {
-        $prestasi = Prestasi::latest()->get();
+        $prestasi = Prestasi::orderBy('id', 'desc')->get();
         return view('prestasi.index', compact('prestasi'));
     }
 
@@ -98,7 +98,7 @@ class PrestasiController extends Controller
             'nama_prestasi' => 'required|unique:prestasis',    
             'tingkat' => 'required',
             'deskripsi' => 'required',
-            'foto' => 'required|mimes:jpg,png|max:1024',
+            'foto' => 'nullable|mimes:jpg,png|max:1024',
 
         ]);
         $prestasi = Prestasi::findOrFail($id);
@@ -107,7 +107,6 @@ class PrestasiController extends Controller
         $prestasi->tingkat = $request->tingkat;
         $prestasi->deskripsi = $request->deskripsi;   
         if ($request->hasFile('foto')) {
-            $prestasi->deleteImage();
             $img= $request->file('foto');
             $name= rand(1000,9999). $img->getClientOriginalName();
             $img->move('storage/gambar/', $name);

@@ -13,7 +13,7 @@ class KaryawanController extends Controller
      */
     public function index()
     {
-        $karyawan = Karyawan::latest()->get();
+        $karyawan = Karyawan::orderBy('id', 'desc')->get();
         return view('karyawan.index', compact('karyawan'));
     }
 
@@ -99,7 +99,7 @@ class KaryawanController extends Controller
             'jenis_kelamin' => 'required',
             'tugas' => 'required',
             'jabatan' => 'required',
-            'foto' => 'required|mimes:jpg,png|max:1024',
+            'foto' => 'nullable|mimes:jpg,png|max:1024',
 
         ]);
         $karyawan = karyawan::findOrFail($id);

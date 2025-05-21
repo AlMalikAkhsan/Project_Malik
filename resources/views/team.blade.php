@@ -18,8 +18,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Our Team</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Karyawan</h2>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -29,7 +28,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset ('user/img/team/team-1.jpg')}}" class="img-fluid" alt="">                
+                <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 300px;">
               </div>
               <div class="member-info">
                 <h4>{{$data->nama}}</h4>

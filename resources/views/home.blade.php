@@ -5,8 +5,8 @@
                 <div class="row page-titles mx-0">
                     <div class="col-sm-6 p-md-0">
                         <div class="welcome-text">
-                            <h4>Hi, welcome back!</h4>
-                            <p class="mb-0">Your business dashboard template</p>
+                            <h4>haloo, Selamat Datang!</h4>
+                            <p class="mb-0">Semoga berjalan dengan lancar!!</p>
                         </div>
                     </div>                    
                     </div>
