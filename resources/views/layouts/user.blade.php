@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Company Bootstrap Template</title>
+  <title>User</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{{ asset ('user/img/favicon.png')}}" rel="icon">
-  <link href="{{ asset ('user/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  <link href="{{ asset ('user/img/logo-tk-com.jpeg')}}" rel="icon">
+  <link href="{{ asset ('user/img/logo-tk-com.jpeg')}}" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">

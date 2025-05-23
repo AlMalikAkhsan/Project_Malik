@@ -15,7 +15,7 @@
         </div> 
         <div class="col-lg-2 col-md-3 footer-links">
             <h4>Alamat Sekolah ini!!</h4>           
-            <p>Jl. Sasak Gantung No.9, Balonggede, Kec. Regol, Kota Bandung, Jawa Barat 40251</p>
+            <p>Komplek PLN Lebakgede Blok D , Kelurahan, Lebakgede, Kecamatan, Pulomerak - Kota Cilegon, Provinsi Banten</p>
         </div>
       </div>
     </div>

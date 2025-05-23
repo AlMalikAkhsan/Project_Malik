@@ -26,7 +26,7 @@
       <div class="container">
         <div class="row gy-4 justify-content-center">
         @foreach($karyawan as $data)                   
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3 col-md-6 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
                 <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 300px;">
@@ -55,8 +55,8 @@
             <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
                 <div class="row gy-4 justify-content-center" data-aos="fade-up" data-aos-delay="200">
                     @foreach($eskul as $data)
-                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                        <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 400px;">
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+                        <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 350px;">
                         <div class="portfolio-info">
                             <h4>{{$data->nama_eskul}}</h4>
                             <a href="{{asset('user/img/masonry-portfolio/masonry-portfolio-1.jpg')}}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"></a>
@@ -81,7 +81,7 @@
                 <div class="col-lg-4">
                     <article class="position-relative h-100">
 
-                        <div class="post-img position-relative overflow-hidden">
+                        <div class="post-img overflow-hidden d-flex justify-content-center">
                             <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 500px;">
                         </div>
                         <div class="post-content d-flex flex-column">

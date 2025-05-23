@@ -30,25 +30,24 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Tugas</label>
-                                            <select class="form-control @error('tugas') is-invalid @enderror" name="tugas" value="{{$karyawan->tugas}}">
-                                                <option value="b.indonesia">B.indonesia</option>
-                                                <option value="b.inggris">B.Inggris</option>
-                                                <option value="penjaskes">Penjaskes</option>
-                                                <option value="ppkn">Ppkn</option>
-                                            </select>
+                                            <textarea name="tugas" class="form-control @error('tugas') is-invalid @enderror"></textarea>
                                             @error('tugas')
                                             <div class="invalid-feedback">{{$message}}</div>
                                             @enderror
                                         </div>
                                         <div class="form-group">
                                             <label>Jabatan</label>
-                                            <select class="form-control @error('jabatan') is-invalid @enderror" name="jabatan" value="{{$karyawan->jabatan}}">
-                                                <option value="staff">Staff</option>
+                                            <select class="form-control @error('jabtan') is-invalid @enderror" name="jabatan">
+                                                <option value="tata usaha">Tata Usaha</option>
                                                 <option value="guru">Guru</option>
+                                                <option value="kepala sekolah">Kepala Sekolah</option>
+                                                <option value="staf">Staff</option>
+                                                <option value="bimbingan konseling">Bimbingan Konseling</option>
+                                                <option value="wakil kepala sekolah">Wakil Kepala Sekolah</option>
                                             </select>
-                                             @error('jabatan')
-                                             <div class="invalid-feedback">{{$message}}</div>
-                                             @enderror
+                                            @error('jabatan')
+                                            <div class="invalid-feedback">{{$message}}</div>
+                                            @enderror
                                         </div>
                                         <div class="mb-2">
                                             <label for="">Foto</label>

@@ -20,30 +20,22 @@
         @foreach($informasi as $data)
           <div class="col-lg-4">                      
             <article class="position-relative h-100">
-
-              <div class="post-img position-relative overflow-hidden">
-                <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 500px;">                
+              <br>
+              <div class="post-img overflow-hidden d-flex justify-content-center">
+                <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 250px;">                
               </div>
-
               <div class="post-content d-flex flex-column">
-
-                <h3 class="post-title">{{$data->judul}}</h3>                
-
+                <h3 class="post-title">{{Str::limit($data->judul,50)}}</h3>
                 <p>
-                  {{$data->deskripsi}}
+                  {{Str::limit($data->deskripsi,50)}}
                 </p>
-
                 <hr>
-
                 <a href="{{route ('detail.informasi', $data->id)}}" class="readmore stretched-link"><span>Selengkapnya</span><i class="bi bi-arrow-right"></i></a>
-
               </div>
-
             </article>          
           </div><!-- End post list item -->          
         @endforeach
         </div>
       </div>
-
     </section><!-- /Blog Posts Section -->
 @endsection

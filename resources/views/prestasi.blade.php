@@ -26,8 +26,7 @@
                     </div>
                     <div class="post-content d-flex flex-column">
                         <h3 class="post-title">{{$data->nama_prestasi}}</h3>
-                        <p>{{$data->tgl_prestasi}}</p>
-                        <p>{{$data->tingkat}}</p>
+                        <p>{{$data->tgl_prestasi}}</p>                        
                         <p>{{$data->deskripsi}}</p>
                     </div>
 

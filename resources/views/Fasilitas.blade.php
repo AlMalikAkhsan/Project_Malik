@@ -24,8 +24,7 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
                     <img src="{{asset('storage/gambar/'. $data->foto)}}" alt="" style="width: 400px;">
                     <div class="portfolio-info">
-                        <h4>{{$data->nama_fasilitas}}</h4>
-                        <p>Lorem ipsum, dolor sit</p>
+                        <h4>{{$data->nama_fasilitas}}</h4>                        
                         <a href="{{asset ('user/img/masonry-portfolio/masonry-portfolio-1.jpg')}}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"></a>
                     </div>
                 </div><!-- End Portfolio Item -->  
