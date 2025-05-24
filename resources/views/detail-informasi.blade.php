@@ -37,7 +37,7 @@
 
                 <div class="meta-bottom">                 
                   <ul class="cats">
-                    <li><a href="{{url ('informasi')}}"><b>Kembali</b></a></li>
+                    <li><a href="{{url ('about')}}"><b>Kembali</b></a></li>
                   </ul>                  
                 </div><!-- End meta bottom -->
 

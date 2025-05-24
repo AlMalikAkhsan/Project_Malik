@@ -89,6 +89,7 @@
                             <p>{{$data->tgl_prestasi}}</p>
                             <p>{{$data->tingkat}}</p>
                             <p>{{$data->deskripsi}}</p>
+                            <hr>
                         </div>
 
                     </article>

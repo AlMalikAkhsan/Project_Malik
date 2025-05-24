@@ -9,8 +9,8 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{{ asset ('user/img/logo-tk-com.jpeg')}}" rel="icon">
-  <link href="{{ asset ('user/img/logo-tk-com.jpeg')}}" rel="apple-touch-icon">
+  <link href="{{ asset ('user/img/al-logo.png')}}" rel="icon">
+  <link href="{{ asset ('user/img/al-logo.png')}}" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -26,6 +26,8 @@
 
   <!-- Main CSS File -->
   <link href="{{ asset ('user/css/main.css')}}" rel="stylesheet">
+
+  
   
   @yield('style')
   <!-- =======================================================

@@ -37,7 +37,7 @@ class FrontController extends Controller
     {
         $data = Informasi::findOrFail($id);
         return view('detail-informasi', compact('data'));
-    }
+    }   
     public function fasilitas()
     {
         $fasilitas = Fasilitas::orderBy('id', 'desc')->get();

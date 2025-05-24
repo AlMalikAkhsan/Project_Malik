@@ -15,7 +15,7 @@
         </div> 
         <div class="col-lg-2 col-md-3 footer-links">
             <h4>Alamat Sekolah ini!!</h4>           
-            <p>Komplek PLN Lebakgede Blok D , Kelurahan, Lebakgede, Kecamatan, Pulomerak - Kota Cilegon, Provinsi Banten</p>
+            <p>Jl. Gayungsari IV No.27-29, Gayungan, Kec. Gayungan, Surabaya, Jawa Timur 60233</p>
         </div>
       </div>
     </div>
